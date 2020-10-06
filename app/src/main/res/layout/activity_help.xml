@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_common" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:id="@+id/parent"
+        android:layout_marginTop="8dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Report"
+            android:textColor="#979797"
+            android:textSize="20dp"
+            android:id="@+id/Report"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_below="@id/Report"
+            android:text="Community Guidelines"
+            android:textColor="#979797"
+            android:textSize="20dp"
+            android:id="@+id/user_guidelines"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_below="@id/user_guidelines"
+            android:text="Privacy policy"
+            android:textColor="#979797"
+            android:textSize="20dp"
+            android:id="@+id/privacy_policy"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

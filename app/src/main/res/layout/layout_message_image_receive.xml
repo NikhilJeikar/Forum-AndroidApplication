@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingVertical="5dp"
+    android:paddingRight="120dp"
+    android:paddingLeft="7dp"
+    android:clipToPadding="false">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/line1"
+        android:background="@drawable/forum_default_layout"
+        tools:ignore="ExtraText">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/message_body_1"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="10dp"
+            android:layout_margin="10dp"
+            android:layout_alignParentLeft="true"
+            android:elevation="2dp"
+            />
+        <ProgressBar
+            android:id="@+id/loading"
+            style="?android:attr/progressBarStyle"
+            android:indeterminateDrawable="@drawable/indefenite_progress"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+        <TextView
+            android:id="@+id/message_body_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:elevation="2dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginRight="55dp"
+            android:fontFamily="@font/concert"
+            android:maxLength="180"
+            android:textColor="#ffffff"
+            android:layout_below="@id/message_body_1"
+            />
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/message_time_1"
+        android:layout_alignEnd="@id/line1"
+        android:singleLine="true"
+        android:fontFamily="@font/concert"
+        android:padding="10dp"
+        android:textSize="12dp"
+        android:textColor="#ffffff"
+        android:layout_alignBottom="@id/line1"/>
+
+</RelativeLayout>

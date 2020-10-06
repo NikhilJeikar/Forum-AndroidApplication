@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:background="#272727"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:id="@id/textview1"/>
+    <EditText
+        android:id="@+id/edittext1"
+        android:layout_width="170dp"
+        android:maxLength="15"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview1"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:layout_marginLeft="15dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stream "
+        android:layout_marginTop="3.5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@id/edittext1"
+        android:id="@+id/Stream"/>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_below="@id/edittext1"
+        android:id="@+id/Radio_Group_Stream"
+        android:orientation="horizontal"
+        android:layout_marginLeft="100dp"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#4285F4"
+            android:checked="true"
+            android:id="@+id/Forum_Radiobutton"
+            android:text="Forum"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Channel_Radiobutton"
+            android:buttonTint="#4285F4"
+            android:text="Channel"/>
+    </RadioGroup>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stream type"
+        android:layout_marginTop="3.5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@id/Radio_Group_Stream"
+        android:id="@+id/Stream_Type"/>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_below="@id/Radio_Group_Stream"
+        android:id="@+id/Radio_Group"
+        android:orientation="horizontal"
+        android:layout_marginLeft="100dp"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:checked="true"
+            android:buttonTint="#4285F4"
+            android:layout_height="wrap_content"
+            android:id="@+id/Public_Radiobutton"
+            android:text="Public "/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Private_Radiobutton"
+            android:buttonTint="#4285F4"
+            android:text="Private"/>
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Okay"
+        android:background="@android:color/transparent"
+        android:layout_below="@id/Radio_Group"
+        android:id="@+id/ok_btn"
+        android:layout_alignParentRight="true"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cancel"
+        android:background="@android:color/transparent"
+        android:layout_below="@id/Radio_Group"
+        android:layout_marginRight="70dp"
+        android:id="@+id/cancel_btn"
+        android:layout_alignParentRight="true"/>
+
+
+</RelativeLayout>

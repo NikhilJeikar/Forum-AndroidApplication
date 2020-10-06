@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/e_feed"
+        android:icon="@drawable/button_home"
+        android:enabled="true"
+        android:title=""/>
+
+    <item
+        android:id="@+id/feed"
+        android:enabled="true"
+        android:icon="@drawable/button_explore"
+        android:title=""/>
+
+    <item
+        android:id="@+id/settings"
+        android:enabled="true"
+        android:icon="@drawable/button_notification"
+        android:title=""/>
+
+</menu>

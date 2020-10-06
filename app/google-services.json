@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "974839077249",
+    "firebase_url": "https://connect-us-fbbc0.firebaseio.com",
+    "project_id": "connect-us-fbbc0",
+    "storage_bucket": "connect-us-fbbc0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:974839077249:android:a68d317da4167e6eae7080",
+        "android_client_info": {
+          "package_name": "com.haggle.forum"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "974839077249-soj0qcdtl2a81dbrhhkm2hv8mhhsdkjv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4Y3tfwj1KJSoJiamQinMRZ5n4Dry-mxk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "974839077249-soj0qcdtl2a81dbrhhkm2hv8mhhsdkjv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

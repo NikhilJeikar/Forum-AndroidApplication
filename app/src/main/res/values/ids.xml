@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="textview1" type="id" />
+    <item name="gridImageProgressbar" type="id" />
+    <item name="gridImageView" type="id" />
+    <item name="textview0" type="id" />
+</resources>

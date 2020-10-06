@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_common" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:id="@+id/parent"
+        android:layout_marginTop="8dp"
+        >
+        <RelativeLayout
+            android:id="@+id/layout_seg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp">
+            <TextView
+                android:id="@+id/text_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="Email"/>
+            <TextView
+                android:id="@+id/sub_text_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_1"
+                android:layout_marginLeft="10dp"
+                android:text="maildkndsn"/>
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Change Email"
+            android:textColor="#979797"
+            android:textSize="20dp"
+            android:layout_below="@id/layout_seg"
+            android:id="@+id/Cmail"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Change Password"
+            android:layout_below="@id/Cmail"
+            android:textColor="#979797"
+            android:textSize="20dp"
+            android:id="@+id/Cpassorword"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="AdSense"
+            android:layout_below="@id/Cpassorword"
+            android:textColor="#979797"
+            android:textSize="20dp"
+            android:id="@+id/AdSense"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

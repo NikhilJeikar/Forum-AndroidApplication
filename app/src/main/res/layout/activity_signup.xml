@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:textSize="35dp"
+        android:textColor="#4285F4"
+        android:text="FORUMS"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/lay0"
+        android:padding="20dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lay0"
+        android:layout_centerInParent="true"
+        >
+
+
+        <EditText
+            android:id="@+id/edittext1"
+            android:layout_width="match_parent"
+            android:layout_marginRight="30dp"
+            android:layout_height="50dp"
+            android:foreground="@drawable/outline_blue_1"
+            android:background="@drawable/outline_blue_1"
+            android:backgroundTint="#21437a"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="10dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:layout_marginLeft="20dp" />
+
+        <EditText
+            android:id="@+id/edittext2"
+            android:layout_width="match_parent"
+            android:layout_marginRight="30dp"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:foreground="@drawable/outline_blue_1"
+            android:background="@drawable/outline_blue_1"
+            android:backgroundTint="#21437a"
+            android:layout_marginBottom="10dp"
+            android:layout_height="50dp"
+            android:paddingLeft="10dp"
+            android:layout_below="@id/edittext1"
+            android:layout_marginLeft="20dp" />
+        <EditText
+            android:id="@+id/edittext3"
+            android:layout_width="match_parent"
+            android:layout_marginRight="30dp"
+            android:inputType="textPassword"
+            android:foreground="@drawable/outline_blue_1"
+            android:background="@drawable/outline_blue_1"
+            android:backgroundTint="#21437a"
+            android:layout_marginBottom="10dp"
+            android:hint="Confirm Password"
+            android:paddingLeft="10dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/edittext2"
+            android:layout_marginLeft="20dp" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:id="@+id/lay1"
+            android:layout_below="@+id/edittext3">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/forget"
+                android:textSize="12dp"
+                android:text="By signingup your are agreeing to the "/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/forget"
+                android:textSize="12dp"
+                android:textColor = "#4285F4"
+                android:id="@+id/signup"
+                android:text="  Terms and condition"/>
+        </RelativeLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Signup"
+            android:background="@drawable/outline_blue_1"
+            android:backgroundTint="#4285F4"
+
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/lay1"
+            android:id="@+id/ok_btn" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

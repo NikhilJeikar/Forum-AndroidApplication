@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ReportGroup">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_report"/>
+
+
+    <EditText
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="#ffffff"
+        android:minHeight="50dp"
+        android:hint="Report your problem..."
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@drawable/outline_blue_1"
+        android:foreground="@drawable/outline_blue_1"
+        android:backgroundTint="#21437a"
+        android:inputType="textCapSentences|textShortMessage"
+        android:maxLength="180"
+        android:imeOptions="actionDone"
+        android:id="@+id/Text"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Text">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Attach screen shot"
+            android:layout_centerVertical="true"
+            android:textSize="15dp"
+            android:layout_toRightOf="@+id/attach"
+            android:id="@+id/text1"/>
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/attach"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/add"
+            android:layout_marginLeft="10dp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

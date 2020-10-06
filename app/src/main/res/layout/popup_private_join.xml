@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:background="#272727"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:id="@id/textview1"/>
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/button_qr"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/scan_button"/>
+    <EditText
+        android:id="@+id/edittext1"
+        android:layout_width="170dp"
+        android:maxLength="8"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview1"
+        android:backgroundTint="#4285F4"
+        android:hint="ID"
+        android:inputType="number"
+        android:layout_marginLeft="15dp" />
+    <EditText
+        android:id="@+id/edittext2"
+        android:layout_width="170dp"
+        android:inputType="numberPassword"
+        android:hint="KEY"
+        android:maxLength="6"
+        android:backgroundTint="#4285F4"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edittext1"
+        android:layout_marginLeft="15dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Okay"
+        android:background="@android:color/transparent"
+        android:layout_below="@id/edittext2"
+        android:id="@+id/ok_btn"
+        android:layout_alignParentRight="true"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cancel"
+        android:background="@android:color/transparent"
+        android:layout_below="@id/edittext2"
+        android:layout_marginRight="70dp"
+        android:id="@+id/cancel_btn"
+        android:layout_alignParentRight="true"/>
+
+
+</RelativeLayout>

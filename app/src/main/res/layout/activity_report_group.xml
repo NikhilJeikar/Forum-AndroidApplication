@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ReportGroup">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_report"/>
+
+
+    <EditText
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="#ffffff"
+        android:minHeight="50dp"
+        android:hint="Reason"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@drawable/outline_blue_1"
+        android:foreground="@drawable/outline_blue_1"
+        android:backgroundTint="#21437a"
+        android:inputType="textCapSentences|textShortMessage"
+        android:maxLength="180"
+        android:imeOptions="actionDone"
+        android:id="@+id/Text"/>
+
+<RadioGroup
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/Text"
+    android:id="@+id/Report_1"
+
+    >
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Report_Spam"
+        android:checked="true"
+        android:buttonTint="#4285F4"
+        android:text="It's spam"/>
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Report_Violence"
+        android:buttonTint="#4285F4"
+        android:text="Violence"/>
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Report_Bullying"
+        android:buttonTint="#4285F4"
+        android:text="Bullying"/>
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="#4285F4"
+        android:id="@+id/Report_Sexual_content"
+        android:text="Sexual content"/>
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Report_Child_abuse"
+        android:buttonTint="#4285F4"
+        android:text="Child abuse"/>
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="#4285F4"
+        android:id="@+id/Report_Drug_abuse"
+        android:text="Drug abuse"/>
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="#4285F4"
+        android:id="@+id/Report_Others"
+        android:text="Others"/>
+
+</RadioGroup>
+</RelativeLayout>

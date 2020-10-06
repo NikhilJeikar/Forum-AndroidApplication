@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_common"
+        />
+
+
+            <RelativeLayout
+                android:id="@+id/Preview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="15dp">
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Preview"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/Holder"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Up">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/template_downvote"
+                        android:id="@+id/downvote"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_centerVertical="true"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/downvote"
+                        android:layout_marginLeft="2dp"
+                        android:layout_centerHorizontal="true"
+                        android:paddingTop="20dp"
+                        android:text="0"
+                        android:textSize="20dp"
+                        android:id="@+id/downvote_count"
+                        />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/Up">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/template_upvote"
+                        android:id="@+id/upvote"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_centerVertical="true"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/upvote"
+                        android:layout_marginLeft="15dp"
+                        android:textSize="20dp"
+                        android:paddingTop="20dp"
+                        android:id="@+id/upvote_count"
+                        android:layout_centerHorizontal="true"
+                        android:text="0"
+                        />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/message"
+                android:layout_below="@+id/Holder">
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/add"
+                    >
+                    <com.haggle.forum.CustomTemplate.CustomListview
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="#fff"
+                        android:id="@+id/list">
+
+                    </com.haggle.forum.CustomTemplate.CustomListview>
+
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+            </RelativeLayout>
+
+
+
+    <include
+        android:id="@+id/message"
+        layout="@layout/layout_include_edittext_send"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="3dp"
+        android:layout_height="wrap_content" />
+
+
+
+
+</RelativeLayout>

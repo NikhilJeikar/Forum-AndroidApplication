@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/Parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_common"
+        />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/Comment"
+            android:id="@+id/add"
+            android:layout_below="@id/toolbar">
+            <com.haggle.forum.CustomTemplate.CustomListview
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="#fff"
+                android:id="@+id/list"/>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/outline_blue"
+            android:foreground="@drawable/outline_blue"
+            android:backgroundTint="@color/Black"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="3dp"
+            android:id="@+id/Comment"
+            android:layout_centerVertical="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true">
+
+        </RelativeLayout>
+
+</RelativeLayout>
