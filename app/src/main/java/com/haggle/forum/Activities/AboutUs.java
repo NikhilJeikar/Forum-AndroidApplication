@@ -16,7 +16,7 @@ public class AboutUs extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
-
+        //Temp
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("About Us");

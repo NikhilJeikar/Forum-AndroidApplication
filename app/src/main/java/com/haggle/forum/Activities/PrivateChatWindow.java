@@ -54,7 +54,7 @@ public class PrivateChatWindow extends AppCompatActivity {
     private Boolean Belong;
     private Long Size;
     private Integer RefSize;
-    private Boolean Theju = false;
+    private Boolean IMP = false;
     private int count = 0;
 
     private FirebaseAuth firebaseAuth;
@@ -455,7 +455,7 @@ public class PrivateChatWindow extends AppCompatActivity {
             }
         });
 
-        Theju = true;
+        IMP = true;
     }
 
 
@@ -548,7 +548,7 @@ public class PrivateChatWindow extends AppCompatActivity {
                 DataSnapshot dataSnapshot = dataSnapshot1.child("Private Message").child(ParentId);
                 try{
                     Integer temp = Integer.parseInt(dataSnapshot1.child("Count").child(ParentId).getValue(String.class));
-                    if(Theju && temp > RefSize){
+                    if(IMP && temp > RefSize){
                         for (DataSnapshot snapshot: dataSnapshot.getChildren()) {
                             Integer id = Integer.parseInt(snapshot.getKey());
                             if(id>RefSize) {
@@ -575,7 +575,7 @@ public class PrivateChatWindow extends AppCompatActivity {
                 }
                 catch (Exception e){
                     Integer temp = 0;
-                    if(Theju && temp > RefSize){
+                    if(IMP && temp > RefSize){
                         for(DataSnapshot snapshot: dataSnapshot.getChildren()){
                             Integer id = Integer.parseInt(snapshot.getKey());
                             if(id>RefSize){

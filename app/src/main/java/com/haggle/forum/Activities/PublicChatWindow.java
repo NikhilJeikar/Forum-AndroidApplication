@@ -8,7 +8,6 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
@@ -19,7 +18,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
@@ -55,7 +53,7 @@ public class PublicChatWindow extends AppCompatActivity {
     private String UID,Chat_ID, Stream;
     private Boolean Admin;
     private Integer Size = 0,RefSize = 0;
-    private Boolean Theju = false;
+    private Boolean IMP = false;
     private long mLastClickTime = 0;
     private int count = 0;
 
@@ -402,7 +400,7 @@ public class PublicChatWindow extends AppCompatActivity {
             }
         });
 
-        Theju = true;
+        IMP = true;
     }
 
     private void LoadSeg(){
@@ -492,7 +490,7 @@ public class PublicChatWindow extends AppCompatActivity {
                 DataSnapshot dataSnapshot = dataSnapshot1.child("Public Message");
                 try {
                     Integer temp = Integer.parseInt(dataSnapshot1.child("Count").child(Chat_ID).getValue(String.class));
-                    if(Theju && temp > RefSize){
+                    if(IMP && temp > RefSize){
                         for(DataSnapshot snapshot: dataSnapshot.getChildren()){
                             Integer id = Integer.parseInt(snapshot.getKey());
                             if(id>RefSize){
@@ -523,7 +521,7 @@ public class PublicChatWindow extends AppCompatActivity {
                 }
                 catch (Exception e){
                     Integer temp = 0;
-                    if(Theju && temp > RefSize){
+                    if(IMP && temp > RefSize){
                         for(DataSnapshot snapshot: dataSnapshot.getChildren()){
                             Integer id = Integer.parseInt(snapshot.getKey());
                             if(id>RefSize){
