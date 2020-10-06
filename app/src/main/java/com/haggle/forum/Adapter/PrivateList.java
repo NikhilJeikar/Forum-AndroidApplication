@@ -50,7 +50,7 @@ public class PrivateList extends BaseAdapter {
 
         LayoutInflater Inflater = (LayoutInflater)context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
         final PrivateListHolder holder = list.get(position);
-        if(holder.getType().equals("Text")){
+        if(holder.getType().equals("Text") && holder != null){
             if(holder.getBelong()){
                 convertView = Inflater.inflate(R.layout.layout_message_text_send, null);
                 Holder.textView = convertView.findViewById(R.id.message_body_1);

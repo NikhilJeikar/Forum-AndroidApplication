@@ -366,7 +366,7 @@ public class PrivateChatWindow extends AppCompatActivity {
                     String count = String.valueOf(dataSnapshot.getChildrenCount()+1);
                     databaseReference.child("Rooms").child(ChatId).child("Private Message").child(ParentId).child(count).child("Rand").setValue(UID);
                     databaseReference.child("Rooms").child(ChatId).child("Private Message").child(ParentId).child(count).child("Value").setValue(Data);
-                    databaseReference.child("Rooms").child(ChatId).child("Private Message").child(count).child("Type").setValue("Text");
+                    databaseReference.child("Rooms").child(ChatId).child("Private Message").child(ParentId).child(count).child("Type").setValue("Text");
                     databaseReference.child("Rooms").child(ChatId).child("Private Message").child(ParentId).child(count).child("Time").setValue(utils.getCurrentTime());
                     databaseReference.child("Rooms").child(ChatId).child("Private Message").child(ParentId).child(count).child("Date").setValue(utils.getCurrentDate());
 
@@ -404,15 +404,13 @@ public class PrivateChatWindow extends AppCompatActivity {
                         junk = snapshot.child("Date").getValue(String.class);
                         Type = snapshot.child("Type").getValue(String.class);
 
-                        if(Data != null && Date != null && SenderID != null && junk != null ){
+                        if(Data != null && Date != null && SenderID != null && junk != null  && Type != null){
                                 if(SenderID.equals(UID)){
                                     PrivateListHolder holder = new PrivateListHolder(Data,Date,Type,true);
-                                    lv.setAdapter(Adapter);
                                     Adapter.Add(holder);
                                 }
                                 else {
                                     PrivateListHolder holder = new PrivateListHolder(Data,Date,Type,false);
-                                    lv.setAdapter(Adapter);
                                     Adapter.Add(holder);
                                 }
                         }
@@ -428,7 +426,7 @@ public class PrivateChatWindow extends AppCompatActivity {
                         junk = snapshot.child("Date").getValue(String.class);
                         Type = snapshot.child("Type").getValue(String.class);
 
-                        if(Data != null && Date != null && SenderID != null && junk != null ){
+                        if(Data != null && Date != null && SenderID != null && junk != null && Type != null){
                             if(SenderID.equals(UID)){
                                 PrivateListHolder holder = new PrivateListHolder(Data,Date,Type,true);
                                 Adapter.Add(holder);
@@ -484,7 +482,7 @@ public class PrivateChatWindow extends AppCompatActivity {
                             Date = snapshot.child("Time").getValue(String.class);
                             Type = snapshot.child("Type").getValue(String.class);
 
-                            if(Data != null && Date != null && SenderID != null ){
+                            if(Data != null && Date != null && SenderID != null&& Type != null ){
                                 if(SenderID.equals(UID)){
                                     PrivateListHolder holder = new PrivateListHolder(Data,Date,Type,true);
                                     list.add(holder);
@@ -508,7 +506,7 @@ public class PrivateChatWindow extends AppCompatActivity {
                             Date = snapshot.child("Time").getValue(String.class);
                             Type = snapshot.child("Type").getValue(String.class);
 
-                            if(Data != null && Date != null && SenderID != null ){
+                            if(Data != null && Date != null && SenderID != null && Type != null ){
                                 if(SenderID.equals(UID)){
                                     PrivateListHolder holder = new PrivateListHolder(Data,Date,Type,true);
                                     list.add(holder);
@@ -559,7 +557,7 @@ public class PrivateChatWindow extends AppCompatActivity {
                                 Date = snapshot.child("Time").getValue(String.class);
                                 Type = snapshot.child("Type").getValue(String.class);
 
-                                if (Data != null && Date != null && SenderID != null) {
+                                if (Data != null && Date != null && SenderID != null&& Type != null) {
                                     if (SenderID.equals(UID)) {
                                         PrivateListHolder holder = new PrivateListHolder(Data, Date, Type,true);
                                         Adapter.Add(holder);
@@ -586,7 +584,7 @@ public class PrivateChatWindow extends AppCompatActivity {
                                 Date = snapshot.child("Time").getValue(String.class);
                                 Type = snapshot.child("Type").getValue(String.class);
 
-                                if(Data != null && Date != null && SenderID != null ){
+                                if(Data != null && Date != null && SenderID != null&& Type != null ){
                                     if(SenderID.equals(UID)){
                                         PrivateListHolder holder = new PrivateListHolder(Data,Date,Type,true);
                                         Adapter.Add(holder);
